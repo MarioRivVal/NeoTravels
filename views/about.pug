@@ -1,0 +1,33 @@
+extends ./layout/index
+
+block content
+  main 
+    include ./layout/navigation
+    section.about
+      .about__content
+        .about__features
+          .section__intro
+            h3.tertiary-title Our Story
+            h2.secondary-title
+              | Memories in Every Journey
+            p
+              | &quot;We are more than just travel
+              | enthusiasts; we are storytellers. Our
+              | journey began with a passion for
+              | exploration and a commitment to turning
+              | each trip into a unique narrative. With
+              | meticulous planning and a touch of
+              | wanderlust, we craft experiences that go
+              | beyond the ordinary, ensuring your
+              | journey becomes a timeless tale of
+              | discovery and joy.&quot;
+          a.btn.header__btn(href='/tours') All Tours
+        .about__gallery
+          figure.figure--1
+            img.about__img(src='/img/about-1.jpg' alt='travel img')
+          figure.figure--2
+            img.about__img(src='/img/about-2.jpg' alt='happy people')
+          figure.figure--2
+            img.about__img(src='/img/about-3.jpg' alt='dancing people')
+          figure.figure--1
+            img.about__img(src='/img/about-4.jpg' alt='sea view')

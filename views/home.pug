@@ -1,0 +1,51 @@
+extends ./layout/index
+
+block content
+  header.header
+    include ./layout/navigation
+    .header__content
+      h1.header__title Discover Your World
+      p.header__text
+        | &quot;Explore the Extraordinary with us. From captivating
+        | landscapes to cultural wonders, let us craft your
+        | unforgettable travel experience&quot;
+      a.btn.header__btn(href='/tours') All Tours
+
+  section.popular
+      .popular__content
+        .section__intro
+          h3.tertiary-title.txt-center
+            | Best places to be
+          h2.secondary-title.txt-center
+            | Popular Destinations
+          p.txt-center
+            | Iconic cities and exotic landscapes with our
+            | curated selection for unforgettable adventures.
+        .popular__destinations
+           include ./layout/toursBlock
+
+  section.discount
+    .discount__content
+      .discount__text
+        h3.tertiary-title 10% DISCOUNT
+        p All Destinations
+        h3.tertiary-title
+          | ALL 
+          span#discount__month FEBRARY
+
+  section.testimonials
+    .testimonials__content
+      .section__intro
+        h3.tertiary-title.txt-center
+          | Grateful travelers
+        h2.secondary-title.txt-center
+          | Some Testimonial
+        p.txt-center
+          | Experiences of our satisfied travelers, sharing
+          | tales of unforgettable journeys.
+      include ./layout/testimonialsBlock
+
+
+
+
+

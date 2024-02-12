@@ -1,0 +1,18 @@
+extends ./layout/index
+
+block content
+  main 
+    include ./layout/navigation
+    section.tours
+      .tours__content
+        .section__intro
+          h3.tertiary-title.txt-center
+            | All Best Destinations
+          h2.secondary-title.txt-center
+            | Tours &amp; Adventures
+          p.txt-center
+            | Discover captivating destinations with our
+            | curated tours, where each experience becomes
+            | a memorable chapter in your travel story.
+        .tours__container
+          include ./layout/toursBlock

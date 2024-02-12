@@ -1,0 +1,12 @@
+each tour in tours
+  a.card(href=`/tours/${tour.slug}`)
+                  img.card-img(src=`/img/tours/${tour.img}.jpg` alt=`${tour.city}-photo`)
+                  p.card-score #{tour.score}
+                  .card-location
+                    p
+                      span#popular__location__city #{tour.city}
+                      |                                              -
+                      span#popular__location__country #{tour.country}
+                    p
+                      | &euro;
+                      span#popular__location__price #{tour.price}

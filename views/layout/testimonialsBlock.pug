@@ -1,0 +1,8 @@
+.comments__box
+    each testimonial in testimonials
+        .comment__card
+            p.comment__text
+                | #{testimonial.message}
+            .comment__user
+                p #{testimonial.name}
+                p #{testimonial.country}

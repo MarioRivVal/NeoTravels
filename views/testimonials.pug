@@ -1,0 +1,40 @@
+extends ./layout/index
+
+block content
+  main 
+    include ./layout/navigation
+    section.comments
+      .comments__content
+        .section__intro
+          h3.tertiary-title.txt-center
+            | Great memories
+          h2.secondary-title.txt-center
+            | Travelers who speak for us
+          p.txt-center
+            | Step into our world of travel through the
+            | eyes of our adventurers. Dive into their
+            | stories, experiences, and the magic of
+            | exploration.
+
+        include ./layout/testimonialsBlock
+
+        h2.secondary-title.txt-center
+          | Share your experiences
+        form.comment__form(action='/testimonials' method='POST')
+          if(alert)
+            p.comment__alert
+              | #{alert}
+          label(for='name')
+            input#name.comment__input(type='text' name='name' placeholder='Name' value= name)
+          label(for='country')
+            input#country.comment__input(type='text' name='country' placeholder='Country' value = country)
+          label(for='message')
+            textarea#message.comment__input(name='message' rows='5' placeholder='Message')= message
+          button.btn.comment__btn(type='submit')
+            | Send
+          p
+            span IMPORTANT: 
+            | No data is being
+            | sent, you can enter any false data, it&apos;s just
+            | for testing, your message will be displayed
+            | in the list above
